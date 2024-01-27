@@ -5,4 +5,5 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("Hello World")
+    content = "<html><body><h1>Welcome to little lemon</h></body></html>"
+    return HttpResponse(content)
