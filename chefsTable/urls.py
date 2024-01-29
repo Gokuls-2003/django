@@ -19,10 +19,11 @@ from django.urls import path,include
 from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('welcome/', include('myapp.urls') ),
-    path('welcome/', views.home ),
-    path('say_hello/', views.say_hello ),
-    path('displayDate/', views.displayDate),
-    path('menu/', views.menu ),
+    # #path('welcome/', include('myapp.urls') ),
+    # path('welcome/', views.home ),
+    # path('say_hello/', views.say_hello ),
+    # path('displayDate/', views.displayDate),
+    # path('menu/', views.menu ),
+    path('', include('myapp.urls'))
     
 ]
