@@ -24,6 +24,8 @@ urlpatterns = [
     # path('say_hello/', views.say_hello ),
     # path('displayDate/', views.displayDate),
     # path('menu/', views.menu ),
-    path('', include('myapp.urls'))
+    #path('', include('myapp.urls'))
+    path('getuser/<name>/<id>', views.pathview, name='pathview'),
+    path("showform/", views.showroom, name="showform"),
     
 ]

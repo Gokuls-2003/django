@@ -50,11 +50,17 @@ from django.http import HttpResponse
 
     #
     
-def index(request):
-    path=request.path
-    method=request.method
-    content = '''<center><h2>Testing django request response object<h2>
-    <p>Resquest path : "{}</p>
-    <p>Resquest Method :{}</p></center>
-    '''.format(path,method)
-    return HttpResponse(content)
+# def index(request):
+#     path=request.path
+#     method=request.method
+#     content = '''<center><h2>Testing django request response object<h2>
+#     <p>Resquest path : "{}</p>
+#     <p>Resquest Method :{}</p></center>
+#     '''.format(path,method)
+#     return HttpResponse(content)
+
+def pathview(request, name, id):
+    return HttpResponse("Name:{} UserID:{}".format(name,id))
+
+def showroom(request):
+    return render(request, "forms.html")
